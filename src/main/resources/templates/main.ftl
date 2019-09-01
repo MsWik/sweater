@@ -4,6 +4,7 @@
 <@c.page>
 <div>
     <@l.logout/>
+    <span><a href="/user">user list</a></span>
 </div>
 
 <div>
@@ -21,7 +22,7 @@
 
 <div>Список сообщений</div>
 <form method="get" action="/main">
-    <input type="text" name="filter" value="${filter}}">
+    <input type="text" name="filter" value="${filter}">
 
     <button type="submit">Найти</button>
 
@@ -33,7 +34,7 @@
     <B>${message.id}</B>
     <SPAN>${message.text}</SPAN>
     <i>${message.tag}</i>
-    <<strong>${(message.author.username)!"&lt;none&gt;"}</strong>
+    <strong>${(message.author.username)!"&lt;none&gt;"}</strong>
 
 </div>
 <#else>
